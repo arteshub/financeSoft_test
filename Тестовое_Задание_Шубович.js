@@ -23,8 +23,8 @@ console.log('Value of Symbols :',JSON.stringify(valueOfSymbol).replace(/[{}]/g, 
 
 //Либо так, если вручную задать конкретное значение поиска
 
-const symbol = "m";
+const symbol = "а";
 console.log(
-  Value of "${symbol}" specifically :,
+  `Value of "${symbol}" specifically :`,
   Array.from(stringReverse).filter((item) => item === symbol).length
 );
