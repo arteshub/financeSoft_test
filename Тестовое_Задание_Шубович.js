@@ -1,7 +1,7 @@
 const string = "Madam, I’m - Adam ";
 console.log(string);
 const stringReverse = Array.from(string)
-  .reverse()
+  .reduce((prev,next)=>next+prev)
   .toString()
   .replace(/[,’ -]/g, "")
   .toLowerCase();
@@ -20,11 +20,3 @@ const valueOfSymbol = Array.from(stringReverse).reduce((a, b) => {
 }, {});
 
 console.log('Value of Symbols :',JSON.stringify(valueOfSymbol).replace(/[{}]/g, ""));
-
-//Либо так, если вручную задать конкретное значение поиска
-
-const symbol = "а";
-console.log(
-  `Value of "${symbol}" specifically :`,
-  Array.from(stringReverse).filter((item) => item === symbol).length
-);
